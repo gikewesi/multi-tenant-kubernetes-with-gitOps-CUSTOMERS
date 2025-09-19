@@ -13,7 +13,7 @@ resource "aws_route" "public_internet" {
 
 # Associate public subnets
 resource "aws_route_table_association" "public_assoc" {
-  for_each = toset(values(var.public_subnet_ids))
+  for_each = var.public_subnet_ids
   subnet_id      = each.key
   route_table_id = aws_route_table.public.id
 }

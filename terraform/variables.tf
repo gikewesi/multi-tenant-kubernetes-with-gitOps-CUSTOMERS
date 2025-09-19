@@ -37,7 +37,3 @@ variable "alb_chart_version" {
   type    = string
   default = "1.10.0"
 }
-variable "alb_role_arn" {
-  description = "IAM role ARN for the AWS Load Balancer Controller service account"
-  type        = string
-}
